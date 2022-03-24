@@ -1,19 +1,18 @@
-//E. Figielska, Metody programowania, 2022
 #include<iostream>
 #include<string>
 using namespace std;
 
 class Macierz {
-	float ** t;		//deklaracja wskaünika do zmiennej typu float* (czyli do wskaünika)
+	float ** t;		//deklaracja wska≈∫nika do zmiennej typu float* (czyli do wska≈∫nika)
 	int n;
 	int m;
 public:
 	Macierz(int n, int m) {
 		this->n = n;
 		this->m = m;
-		t = new float*[n];		//utworzenie n-elementowej tablicy zawierajπcej wskaüniki (adresy)
+		t = new float*[n];		//utworzenie n-elementowej tablicy zawierajƒÖcej wska≈∫niki (adresy)
 		for (int i = 0; i < n; i++) {
-			t[i] = new float[m];		//utworzenie m-elementowej tablicy (elementy sπ wartoúciami), wpisanie adresu tej tablicy do elementu t[i]
+			t[i] = new float[m];		//utworzenie m-elementowej tablicy (elementy sƒÖ warto≈õciami), wpisanie adresu tej tablicy do elementu t[i]
 		}
 	}
 	~Macierz() { //definicja destruktora
@@ -35,8 +34,8 @@ public:
 		}
 	}
 	//bool dodaj(Macierz& w) {
-	//	//dodaje wspÛlrzedne wektora w do wspÛlrzednych wektora, dla ktÛrego wykonuje sie metoda dodaj()
-	//	if (n != w.n) { //dodawanie nie odbedzie sie dla wektorow o rÛznych rozmiarach
+	//	//dodaje wsp√≥lrzedne wektora w do wsp√≥lrzednych wektora, dla kt√≥rego wykonuje sie metoda dodaj()
+	//	if (n != w.n) { //dodawanie nie odbedzie sie dla wektorow o r√≥znych rozmiarach
 	//		return false;
 	//	}
 	//	for (int i = 0; i < n; i++) {
@@ -67,4 +66,4 @@ int main() {
 //	if (zrobione) {
 //		w1.drukuj();
 //	}
-//wywolanie destruktorÛw dla obiektÛw w1 i w2
+//wywolanie destruktor√≥w dla obiekt√≥w w1 i w2
