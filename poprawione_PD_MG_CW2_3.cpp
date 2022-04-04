@@ -3,16 +3,16 @@
 using namespace std;
 
 class Macierz {
-	float ** t;		//deklaracja wskaŸnika do zmiennej typu float* (do wskaŸnika)
+	float ** t;		//deklaracja wskaÅºnika do zmiennej typu float* (do wskaÅºnika)
 	int n;
 	int m;
 public:
 	Macierz(int n, int m) {
 		this->n = n;
 		this->m = m;
-		t = new float*[n];		//utworzenie n-elementowej tablicy zawieraj¹cej wskaŸniki (adresy)
+		t = new float*[n];		//utworzenie n-elementowej tablicy zawierajÄ…cej wskaÅºniki (adresy)
 		for (int i = 0; i < n; i++) {
-			t[i] = new float[m];		//utworzenie m-elementowej tablicy (elementy s¹ wartoœciami), wpisanie adresu tej tablicy do elementu t[i]
+			t[i] = new float[m];		//utworzenie m-elementowej tablicy (elementy sÄ… wartoÅ›ciami), wpisanie adresu tej tablicy do elementu t[i]
 		}
 	}
 	~Macierz() { //definicja destruktora
@@ -45,8 +45,8 @@ public:
 	}
 
 	bool dodaj(Macierz mac) {
-		//dodaje wspólrzedne wektora w do wspólrzednych wektora, dla którego wykonuje sie metoda dodaj()
-		if (n != mac.n || m !=mac.m) { //dodawanie nie odbedzie sie dla wektorow o róznych rozmiarach
+		//dodaje wspÃ³lrzedne wektora w do wspÃ³lrzednych wektora, dla ktÃ³rego wykonuje sie metoda dodaj()
+		if (n != mac.n || m !=mac.m) { //dodawanie nie odbedzie sie dla wektorow o rÃ³znych rozmiarach
 			cout << "Nie pasujace rozmiary tablic." << endl;
 			return false;
 		}
@@ -99,7 +99,7 @@ int main() {
 
 	delete m1;
 	delete m2;
-	//Niestety nie zdazylem dodac zwalniania pamieci
+	//PoprawiÄ‡ zwalnianie pamiÄ™ci funkcjÄ… delete
 
 
 	return 0;
