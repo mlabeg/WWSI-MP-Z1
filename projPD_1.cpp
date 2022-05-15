@@ -5,29 +5,29 @@
 using namespace std;
 
 class Ksiazka{	//definicja klasy
-	private: //sk³adowe s¹ prywatne - dostêpne tylko z operacji klasy
+	private: //skÅ‚adowe sÄ… prywatne - dostÄ™pne tylko z operacji klasy
 		int id;
 		int rok_wydania;
 		int liczba_stron;
 		int stan;
-		string tytul;	//zmienna sk³adowa klasy (dana); string - ³añcuch znaków
+		string tytul;	//zmienna skÅ‚adowa klasy (dana); string - Å‚aÅ„cuch znakÃ³w
 		string autor;
 		float cena;
-	public:	 //sk³adowe publiczne - mo¿na ich u¿ywaæ spoza klasy(np funkcji main)
-		void wpisz(){	//funkcja sk³adowa klasy (operacja)
+	public:	 //skÅ‚adowe publiczne - moÅ¼na ich uÅ¼ywaÄ‡ spoza klasy(np funkcji main)
+		void wpisz(){	//funkcja skÅ‚adowa klasy (operacja)
 			cout<<"\nPodaj informacje o ksiazce: \n";
 			cout<<"Id: ";
 			
 			//cin.sync();
-			cin>>id;	//ID powinno byæ nadawane automatycznie
+			cin>>id;	//ID powinno byÄ‡ nadawane automatycznie
 			cout<<"Tytul: ";
 			cin>>ws;
 			getline(cin, tytul);
 			cout<<"Autor: ";
 			getline(cin, autor);
 			do{
-				cin.clear(); // czyœci flagê b³êdu
-				cin.sync(); // opró¿nia bufor strumienia
+				cin.clear(); // czyÅ›ci flagÄ™ bÅ‚Ä™du
+				cin.sync(); // oprÃ³Å¼nia bufor strumienia
 				cout<<"Rok wydania: ";
 				cin>>rok_wydania;	
 			}while(cin.fail());
@@ -50,7 +50,7 @@ class Ksiazka{	//definicja klasy
 				cout<<"Stan (1-5) \n(1- bardzo dobry, 5- zniszczony): ";
 				cin>>stan;
 				if(stan<1||stan>5){
-					cout<<"Wprowadzono nieprawid³owy stan ksiazki. Sprobuj jeszcze raz.\n";
+					cout<<"Wprowadzono nieprawidÅ‚owy stan ksiazki. Sprobuj jeszcze raz.\n";
 					p=1;
 				}
 			}while(cin.fail()||p);
@@ -75,7 +75,7 @@ class Ksiazka{	//definicja klasy
 					cout<<"dostateczny";
 					break;
 				case 4:
-					cout<<"z³y";
+					cout<<"zÅ‚y";
 					break;
 				case 5:
 					cout<<"zniszczony";
@@ -148,7 +148,7 @@ int dodaj_ksiazki(int n, Ksiazka ksiazki[]){
 	// n - ile mamy do tej pory ksiazek w tablicy
 	char decyzja = 't';
 	do{
-		ksiazki[n].wpisz(); //wywo³anie metody wpisz dla obiektu n-tego w tablicy
+		ksiazki[n].wpisz(); //wywoÅ‚anie metody wpisz dla obiektu n-tego w tablicy
 		n++;
 		cout<<"\nCzy chcesz dodac nowa ksiazke? [t/n]: ";
 		cin >>decyzja;
@@ -228,7 +228,7 @@ void usuwanie_informacji(int n, Ksiazka ksiazki[]){
 		}
 	} while (cin.fail() || l);
 	
-	//mozna dodaæ jeszcze automatyczne numerowanie ID
+	//mozna dodaÄ‡ jeszcze automatyczne numerowanie ID
 	
 	do{
 
@@ -273,7 +273,7 @@ cout << endl;
 }
 
 void sortowanie(int n, Ksiazka ksiazki[]){
-	//sortowanie nie jest "odporne" na tytu³y i autorów wprowadzonych raz z ma³ych raz z wielkich liter (kod ASCII)
+	//sortowanie nie jest "odporne" na tytuÅ‚y i autorÃ³w wprowadzonych raz z maÅ‚ych raz z wielkich liter (kod ASCII)
 	char d;
 	int pmin, pmax, i, p;
 	bool j;
@@ -315,7 +315,7 @@ void sortowanie(int n, Ksiazka ksiazki[]){
 			} while (p >= 0);
 		}
 		else {
-			cout << "Nie znam takiego typu sortowania, spróbuj jeszcze raz.";
+			cout << "Nie znam takiego typu sortowania, sprÃ³buj jeszcze raz.";
 			j = true;
 		}
 	} while (cin.fail() || j); 
@@ -324,7 +324,7 @@ void sortowanie(int n, Ksiazka ksiazki[]){
 
 int main(){
 	
-	Ksiazka ksiazki[100]; //utworzenie tablicy, której elementy s¹ obiektami klasy ksia¿ka;
+	Ksiazka ksiazki[100]; //utworzenie tablicy, ktÃ³rej elementy sÄ… obiektami klasy ksiaÅ¼ka;
 	int lp_ksiazek=0;
 	int w;
 	bool k=true;
