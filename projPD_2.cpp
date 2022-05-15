@@ -3,14 +3,14 @@
 using namespace std;
 
 class Macierz {
-	float ** t;		//deklaracja wskaźnika do zmiennej typu float* (do wskaźnika)
+	float ** t;		//deklaracja wskaźnika do wskaźnika
 	int n;
 	int m;
 public:
 	Macierz(int n, int m) {
 		this->n = n;
 		this->m = m;
-		t = new float*[n];		//utworzenie n-elementowej tablicy zawierającej wskaźniki (adresy)
+		t = new float*[n];		//utworzenie n-elementowej tablicy zawierającej wskaźniki
 		for (int i = 0; i < n; i++) {
 			t[i] = new float[m];		//utworzenie m-elementowej tablicy (elementy są wartościami), wpisanie adresu tej tablicy do elementu t[i]
 		}
@@ -45,8 +45,8 @@ public:
 	}
 
 	bool dodaj(Macierz mac) {
-		//dodaje wspólrzedne wektora w do wspólrzednych wektora, dla którego wykonuje sie metoda dodaj()
-		if (n != mac.n || m !=mac.m) { //dodawanie nie odbedzie sie dla wektorow o róznych rozmiarach
+		//dodaje wspólrzedne wektora w do wspólrzednych wektora, dla którego wykonuje sie dodaj()
+		if (n != mac.n || m !=mac.m) { //porownianie dlugosci wektorow
 			cout << "Nie pasujace rozmiary tablic." << endl;
 			return false;
 		}
@@ -99,7 +99,6 @@ int main() {
 
 	delete m1;
 	delete m2;
-	//Poprawić zwalnianie pamięci funkcją delete
 
 
 	return 0;
